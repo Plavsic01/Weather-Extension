@@ -13,14 +13,14 @@ export const formatTime = (date) => {
 };
 
 export const setDataToDOM = (json) => {
-  const sunriseDate = new Date(json.sunrise * 1000);
-  const sunsetDate = new Date(json.sunset * 1000);
+  const sunriseDate = new Date(json.sys.sunrise * 1000);
+  const sunsetDate = new Date(json.sys.sunset * 1000);
 
   city.innerText = json.name;
-  temp.innerText = Math.round(json.temp) + "°";
-  weatherIcon.src = `https://openweathermap.org/img/wn/${json.icon}@2x.png`;
-  maxTemp.innerText = `Max: ${Math.round(json.temp_max)}°`;
-  minTemp.innerText = `Min: ${Math.round(json.temp_min)}°`;
+  temp.innerText = Math.round(json.main.temp) + "°";
+  weatherIcon.src = `https://openweathermap.org/img/wn/${json.weather[0].icon}@2x.png`;
+  maxTemp.innerText = `Max: ${Math.round(json.main.temp_max)}°`;
+  minTemp.innerText = `Min: ${Math.round(json.main.temp_min)}°`;
   sunriseTime.innerText = `${formatTime(sunriseDate)}`;
   sunsetTime.innerText = `${formatTime(sunsetDate)}`;
 };
