@@ -17,10 +17,10 @@ export const setDataToDOM = (json) => {
   const sunsetDate = new Date(json.sunset * 1000);
 
   city.innerText = json.name;
-  temp.innerText = json.temp + "°";
+  temp.innerText = Math.round(json.temp) + "°";
   weatherIcon.src = `https://openweathermap.org/img/wn/${json.icon}@2x.png`;
-  maxTemp.innerText = `Max: ${json.temp_max}°`;
-  minTemp.innerText = `Min: ${json.temp_min}°`;
+  maxTemp.innerText = `Max: ${Math.round(json.temp_max)}°`;
+  minTemp.innerText = `Min: ${Math.round(json.temp_min)}°`;
   sunriseTime.innerText = `${formatTime(sunriseDate)}`;
   sunsetTime.innerText = `${formatTime(sunsetDate)}`;
 };
