@@ -1,0 +1,13 @@
+{
+  "name": "Weather Report",
+  "version": "1.0.0",
+  "description": "latest weather data for your location",
+  "manifest_version": 3,
+  "permissions": ["geolocation"],
+  "host_permissions": ["https://api.openweathermap.org/*"],
+  "author": "Andrej Plavsic",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Weather Report"
+  }
+}

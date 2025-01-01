@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather Report</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="loading"></div>
+      <div id="data">
+        <main id="main">
+          <h3 id="city"></h3>
+          <img
+            id="weather-icon"
+            src=""
+            width="110px"
+            height="110px"
+            alt="weather icon"
+          />
+          <h3 id="temp"></h3>
+        </main>
+
+        <section id="temp-info">
+          <p id="max-temp"></p>
+          <p id="min-temp"></p>
+        </section>
+
+        <section id="sun-icons">
+          <div id="sunrise">
+            <img src="assets/sunrise.png" alt="sunrise icon" width="50px" />
+            <p id="sunrise-time"></p>
+          </div>
+          <div id="sunset">
+            <img src="assets/sunset.png" alt="sunset icon" width="50px" />
+            <p id="sunset-time"></p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
